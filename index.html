@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+    <link rel="stylesheet" href="style.css"> 
+
+    <title>Text Editor</title>
+</head>
+<body>
+
+    <div class = "container"> 
+        <div class = "options"> 
+            <!-- id makes it unqiue but class makes it easier to style in groups-->
+            <button id ="bold" class="option-button format">
+                <i class ="fa-solid fa-bold"></i>
+            </button>
+            <button id="superscript" class="option-button script">
+                <i class="fa-solid fa-superscript"></i>
+            </button>
+            <button id="subscript" class="option-button script">
+                <i class="fa-solid fa-subscript"></i>
+            </button>
+
+            <button id="insertOrderedList" class="option-button">
+                <div class="fa-solid fa-list-ol"></div>
+            </button>
+            <button id="insertUnorderedList" class="option-button">
+                <i class="fa-solid fa-list"></i>
+            </button>
+
+            <button id="undo" class="option-button">
+                <i class="fa-solid fa-rotate-left"></i>
+            </button>
+            <button id="redo" class="option-button">
+                <i class="fa-solid fa-rotate-right"></i>
+            </button>
+
+            <button id="createLink" class="adv-option-button">
+                <i class="fa fa-link"></i>
+            </button>
+            <button id="unlink" class="option-button">
+                <i class="fa fa-unlink"></i>
+            </button>
+
+            <button id="justifyLeft" class="option-button align">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button id="justifyCenter" class="option-button align">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button id="justifyRight" class="option-button align">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
+            <button id="justifyFull" class="option-button align">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+            <button id="indent" class="option-button spacing">
+                <i class="fa-solid fa-indent"></i>
+            </button>
+            <button id="outdent" class="option-button spacing">
+                <i class="fa-solid fa-outdent"></i>
+            </button>
+
+            <!-- Creates select button that when selected gives the following options-->
+            <select id="formatBlack" class="adv-options-button">
+                <option value ="H1">H1</option>
+                <option value ="H2">H2</option>
+                <option value ="H3">H3</option>
+                <option value ="H3">H3</option>
+                <option value ="H3">H3</option>
+                <option value ="H3">H3</option>
+            </select>
+
+            <select id="frontName" class ="adv-option-button"></select>
+            <select id="frontSize" class ="adv-option-button"></select>
+
+            <div class = "input-wrapper"> 
+                <input type="colour" id="foreColour" class = "adv-option-button"> 
+                <label for="foreColour">Font Colour</label>
+            </div>
+            <div class = "input-wrapper"> 
+                <input type="colour" id="BackColour" class = "adv-option-button"> 
+                <label for="backColour">Highlight Colour</label>
+            </div>
+
+        </div>
+
+        <!--allows users to click inside the <div> and edit the text directly-->
+        <div id= "text-input" contenteditable= "true"></div>
+
+    </div>
+
+    <script src = "script.css"></script>
+    
+</body>
+</html>
