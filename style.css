@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: burlywood; 
+}
+
+.container {
+    background-color: wheat;
+    /* vmin = viewport minium represents a % of the smaller dimension of the viewport
+    90vmin = 90% of the smaller dimen of the viewport*/ 
+    width: 90vmin; 
+    padding: 50px 30px; 
+    /* absolute - removes the elment form the document flow, it positions the relative 
+    to its closet positoned ancestor */ 
+    position: absolute; 
+    /* moves the container back by half of its width and height*/ 
+    transform: translate(-50%, -50%); 
+    left: 50%; 
+    top: 50%; 
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(red, green, blue, alpha); 
+}
+
+.options { 
+    /* flex will allow us to arrange the child elements like buttons and selects ina  flexible way*/ 
+    display: flex; 
+    /* wrap will allow the flex items to wrap onto multiple lines if they cant fit in a row like if the screen shrinks*/ 
+    flex-wrap: wrap; 
+    /* verially aligns the flex items within the container along the center of the flex container*/ 
+    align-items: center; 
+    gap: 15px; 
+}
+
+button {
+    width: 20px; 
+    height: 20px; 
+    display: grid; 
+    place-items: center; 
+    border-radius: 3px; 
+    border: none; 
+    outline: none; 
+    background-color: wheat;
+    color: black; 
+    cursor: pointer; 
+}
+
+select {
+    padding: 7px; 
+    border: 1px solid black; 
+    border-radius: 3px; 
+    cursor: pointer; 
+}
+
+.options label, 
+.options select {
+    font-family: 'Poppins', sans-serif; 
+}
+
+input[type = "color"] {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none; 
+    background-color: transparent;
+    width: 40px; 
+    height: 20px; 
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 15px; 
+    box-shadow: 0 0 0 2px white, 0 0 0 3px black; 
+}
+
+input[type="color"]::-moz-color-swatch {
+    border-radius: 15px; 
+    box-shadow: 0 0 0 2px white, 0 0 0 3px black; 
+}
+
+#text-input {
+    margin-top: 10px; 
+    border: 1px, solid white; 
+    padding: 50px; 
+    height: 50vh; 
+}
+
+/*what is the purpose of this*/ 
+.active { 
+    background-color: whitesmoke; 
+}
